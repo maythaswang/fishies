@@ -2,8 +2,14 @@
 
 This project is a standalone educational project on the topic on creating a stylized ocean environment in Unreal Engine 5. 
 
+<p align="center">
+    <img src="images/thumbnail.webp" loading="lazy" alt="thumbnail">
+    <br>
+    <i>figure 01: Final Scene 2</i>
+</p>
+
 ## Preface 
-This project consist of multiple areas of shader works including waves, water effects, WPO animation shaders, postprocessing effects, multiple other shaders used for water related environment with Unreal Engine material system and custom HLSL nodes, as well as using UE5's Niagara particle system grid3D interface for simulating boids.
+This project consist of multiple areas of shader works including waves, water effects, WPO animation shaders, postprocessing effects, multiple other shaders used for water related environment with Unreal Engine material system and custom HLSL nodes, as well as using UE5's Niagara particle system grid3D for simulating boids.
 
 In this README, I will only list out techniques I've experimented with and some visual of the stages of the implementation.
 The area of coverage is larger than I initially expected. With that being said, it’s possible that I have made some mistakes and misunderstanding, in which case, please feel free to correct my understanding　(´・ω・｀).
@@ -16,6 +22,20 @@ The area of coverage is larger than I initially expected. With that being said, 
 - Here I've tried multiple implementation of WPO wave shaders such as sums of sine waves and sums of gerstner waves.
 - I've also used scrolling normals, 2 sided plane waves, fresnel, depth-opacity, and added refraction for water shader.
 
+<p align="center">
+    <img src="images/01_waves_test_room.webp" loading="lazy" alt="waves_test_room">
+    <br>
+    <i>figure 02: Waves testing room</i>
+    </p>
+<br>
+
+<p align="center">
+    <img src="images/06_gerstner_waves_with_objects.webp" loading="lazy" alt="gerstner_waves_with_objects">
+    <br>
+    <i>figure 03: Gerstner Waves with added effects</i>
+    </p>
+<br>
+
 ### Part 2: Fishes - Boids
 - I've used UE5 Niagara Particle system's Neighbor Grid3D as the acceleration structure for boids. 
 - There are 3 variants of boids implementation I've done
@@ -23,11 +43,32 @@ The area of coverage is larger than I initially expected. With that being said, 
   - Multi-Species boids
   - Predator-Prey system
 
+<p align="center">
+    <img src="images/17_2_species_01.webp" loading="lazy" alt="2_species_01">
+    <br>
+    <i>figure 04: 2 species boids </i>
+    </p>
+<br>
+
 ### Part 3: Effects and Props - Caustics, Post-Processing, Foilage, Setting up final Scene
 - The feature of caustics are created with voronoi based scrolling texture distorted by another scrolling texture
 - The postprocessing material have scene depth based visibility and depth color based on the distance from the sea-level. 
   - The depth-based visibility uses a combination of custom depth and scene depth to fix issue where the area that points to the sky is invisible. 
 - Foliage is animated using combination of wave functions for WPO 
+
+<p align="center">
+    <img src="images/34_grass_wind.webp" loading="lazy" alt="grass_wind_material">
+    <br>
+    <i>figure 05: Seagrass </i>
+    </p>
+<br>
+
+<p align="center">
+    <img src="images/38_final_scene.webp" loading="lazy" alt="final_scene">
+    <br>
+    <i>figure 06: Final Scene</i>
+    </p>
+<br>
 
 ## Simplified Directory Structure
 
