@@ -15,7 +15,7 @@ In this README, I will only list out techniques I've experimented with and some 
 The area of coverage is larger than I initially expected. With that being said, it’s possible that I have made some mistakes and misunderstanding, in which case, please feel free to correct my understanding　(´・ω・｀).
 
 ***The full article will be more detailed about implementation stages and techniques I've experimented. To read it, please check my github blog under the following url below.***
-\<Url here soon \>
+[Article here](https://maythaswang.github.io/posts/002_fishies_ocean/)
 
 ## Implementation stages 
 ### Part 1: Waves- Sine Waves, Gerstner Waves, Scrolling waves
